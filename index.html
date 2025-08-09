@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jual Ikan Laut Segar, Diantar ke Rumah</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            /*background-color: #f0f2f5;*/
+            background-image: url("splash.png");
+            color: #333;
+            line-height: 1;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            background-image: url("splash.png");
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        header h1 {
+            color: #215e3d;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-style: italic;
+            color: #555;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .product-section, .bonus-section, .cta-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .product-section h2, .bonus-section h2, .cta-section h2 {
+            color: #1e8837;
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .whatsapp-button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto 0;
+            padding: 15px;
+            background-color: #25D366; /* Warna WhatsApp */
+            color: #fff;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+        .whatsapp-button img {
+            vertical-align: middle;
+            margin-right: 10px;
+            height: 24px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #888;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Adakah yang mau kalau saya jual ikan laut?</h1>
+            <p>Ikan laut segar, diantar ke rumah setiap order.</p>
+        </header>
+
+        <div class="content">
+
+            <div class="product-section">
+                <h2>Kenapa Harus Ikan Kami?</h2>
+                <!--<img src="https://via.placeholder.com/800x400.png?text=Gambar+Ikan+Segar" alt="Gambar Ikan Laut Segar" class="product-image">-->
+                <img src="2.webp" alt="Gambar Ikan Laut Segar" class="product-image">
+                <p>
+                    Kami menjual ikan laut segar pilihan yang ditangkap langsung oleh nelayan lokal. Diproses dengan cepat dan higienis, menjamin kualitas terbaik sampai ke tangan Anda. Anda tidak perlu repot lagi ke pasar, cukup pesan dan kami antar!
+                </p>
+                <ul>
+                    <li>🐟 Ikan segar setiap hari</li>
+                    <li>🛵 Diantar langsung ke rumah Anda</li>
+                    <li>✅ Kualitas terjamin</li>
+                    <li>💰 Harga terjangkau</li>
+                </ul>
+            </div>
+            <div class="bonus-section">
+                <h2>Ada Bonus Spesial untuk Anda!</h2>
+                <p id="bonus-text">
+                    Sewaktu-waktu disiapkan bonus spesial!
+                    <!--<br>Dapatkan bahan bumbu dapur istimewa, gratis pengiriman, atau diskon khusus untuk pembelian pertama.-->
+                </p>
+                <div id="countdown-timer"></div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Tertarik? Hubungi kami</h2>
+                <a 
+                    href="#" 
+                    id="whatsappLink" 
+                    class="whatsapp-button"
+                    target="_blank"
+                >
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+                    Pesan via WhatsApp
+                </a>
+                <p style="text-align: center; font-size: 0.9em; color: #777;">Klik tombol di atas untuk langsung terhubung dengan kami.</p>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Jual Ikan Laut. Semua Hak Dilindungi.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Data yang akan digunakan
+        const phoneNumber = '6282177794426'; // Ganti dengan nomor WhatsApp Anda
+        const prefilledMessage = 'Halo, saya tertarik dengan ikan laut segarnya. Saya mau pesan.';
+        const encodedMessage = encodeURIComponent(prefilledMessage);
+
+        // Mengambil elemen tombol WhatsApp
+        const whatsappLink = document.getElementById('whatsappLink');
+
+        // Mengatur atribut href pada tombol
+        whatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        // Contoh sederhana untuk bonus (opsional)
+        // Membuat efek countdown (contoh sederhana)
+        const bonusText = document.getElementById('bonus-text');
+        const countdownTimer = document.getElementById('countdown-timer');
+        const bonusArray = [
+            "GRATIS bumbu dapur spesial!",
+            "GRATIS ongkir bagi yang beruntung!",
+
+        ];
+
+        let currentBonusIndex = 0;
+
+        // Fungsi untuk menampilkan bonus secara acak
+        function displayRandomBonus() {
+            bonusText.innerHTML = `<strong>BonusSpesial!</strong> <br> ${bonusArray[currentBonusIndex]}`;
+            currentBonusIndex = (currentBonusIndex + 1) % bonusArray.length;
+        }
+
+
+        // Panggil fungsi displayRandomBonus setiap 5 detik
+         setInterval(displayRandomBonus, 2600); // Anda bisa mengaktifkan ini jika ingin bonus berubah otomatis
+
+        // Atau jalankan sekali saja saat halaman dimuat
+        //displayRandomBonus();
+
+    </script>
+
+</body>
+</html>
